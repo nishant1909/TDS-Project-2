@@ -99,7 +99,7 @@ def query_llm(prompt):
         logging.error(f"Error querying LLM: {e}")
         return ""
 
-def narrate_story(data_info, analysis, extended, insights):
+def narrate_story(data_info, basic_analysis, extended_analysis, insights):
     """Generate a narrative from the analysis."""
     prompt = f"""
     You are a data analyst assistant. Write a Markdown story for the following data analysis:
@@ -108,10 +108,10 @@ def narrate_story(data_info, analysis, extended, insights):
     {data_info}
     
     Basic Analysis:
-    {analysis}
+    {basic_analysis}
     
     Extended Analysis:
-    {extended}
+    {extended_analysis}
     
     Key Insights:
     {insights}
