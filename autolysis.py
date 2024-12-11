@@ -88,8 +88,13 @@ def visualize_distributions(data, output_dir, dataset_name):
 def query_llm(prompt):
     """Query OpenAI for insights."""
     try:
-        response = openai("gpt-4o-mini", api_key=openai_api_key).call(prompt)
-        return response
+        response = openai.ChatCompletion.create(
+            model="gpt-4",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=1500,
+            temperature=0.7
+        )
+        return response['choices'][0]['message']['content']
     except Exception as e:
         logging.error(f"Error querying LLM: {e}")
         return ""
