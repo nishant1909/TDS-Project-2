@@ -5,6 +5,7 @@
 #     "pandas",
 #     "openai",
 #     "logging",
+#   "ipykernel",  
 # ]
 # ///
 
