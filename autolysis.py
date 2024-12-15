@@ -285,7 +285,8 @@ def main(csv_file):
     print("Outliers detected:")
     print(outliers)
 
-    output_dir = "."
+    dataset_name = os.path.splitext(os.path.basename(csv_file))[0]
+    output_dir = os.path.join(".", dataset_name)
     os.makedirs(output_dir, exist_ok=True)
 
     # Visualize the data and check output paths
