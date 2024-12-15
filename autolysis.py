@@ -126,18 +126,6 @@ def main(csv_path, output_dir):
         f.write("\n\n## Generated Story\n")
         f.write(story)
 
-# if __name__ == "__main__":
-#     import argparse
-#     parser = argparse.ArgumentParser(description="Automated Data Analysis Script")
-#     parser.add_argument("csv_path", help="Path to the input CSV file")
-#     parser.add_argument("output_dir", nargs='?', default="results", help="Directory to save outputs (default: 'results')")
-#     args = parser.parse_args()
-
-#     # Ensure output directory exists
-#     os.makedirs(args.output_dir, exist_ok=True)
-
-#     main(args.csv_path, args.output_dir)
-
 if __name__ == "__main__":
     import sys
     if len(sys.argv) < 2:
